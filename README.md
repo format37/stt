@@ -1,7 +1,9 @@
 # Speech to text transcribation services
 ### Cloning the repository
+```
 git clone https://github.com/format37/stt.git
 cd stt
+```
 ## Kaldi Vosk speech to text transcribation GPU docker server
 #### Installation
 ```
