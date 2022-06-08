@@ -6,6 +6,19 @@ import sys
 import wave
 import json
 
+def accept_feature_extractor(phrases, accept):    
+    if len(accept)>1 and accept['text'] != '':        
+        accept_text = str(accept['text'])                
+        accept_start = str(accept['result'][0]['start'])
+        accept_end = accept['result'][-1:][0]['end']        
+        conf_score = []
+        for result_rec in accept['result']:
+            print('#', result_rec['conf'], result_rec['start'], result_rec['end'], result_rec['word'])
+            conf_score.append(float(result_rec['conf']))
+        conf_mid = str(sum(conf_score)/len(conf_score))
+        print('=== middle confidence:', conf_mid, '\n')
+        phrases.append(accept_text)
+
 async def run_test(uri):
 
     phrases = []
@@ -23,15 +36,11 @@ async def run_test(uri):
 
             await websocket.send(data)
             accept = json.loads(await websocket.recv())					
-            if len(accept)>1 and accept['text'] != '':
-                accept_text = str(accept['text'])                
-                phrases.append(accept_text)						
+            accept_feature_extractor(phrases, accept)
 
         await websocket.send('{"eof" : 1}')
-        accept = json.loads(await websocket.recv())					
-        if len(accept)>1 and accept['text'] != '':
-            accept_text = str(accept['text'])                
-            phrases.append(accept_text)						
+        accept = json.loads(await websocket.recv())		
+        accept_feature_extractor(phrases, accept)
 
         print(phrases)
 
