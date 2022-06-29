@@ -16,6 +16,4 @@ services:
           - driver: nvidia
             device_ids: ['0']
             capabilities: [gpu]
-
-    ports:
-      - 192.168.1.23:2700:2700
+    network_mode: "host"
