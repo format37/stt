@@ -89,3 +89,13 @@ ffmpeg -i audio.wav -ac 1 -ar 16000 audio_prepared.wav
 ```
 #### Thanks to
 This container based on Sergey Korol's [repository](https://github.com/sskorol/vosk-api-gpu) and his [docker image](https://hub.docker.com/r/sskorol/vosk-api/tags)
+
+## Yandex speech kit direct request
+[Asynchronous recognition:](https://cloud.yandex.com/en-ru/docs/speechkit/stt/transcribation)  
+* Maximum recording duration: 4 hours.  
+* Maximum file size: 1 GB.  
+[Supported languages:](https://cloud.yandex.com/en-ru/docs/speechkit/stt/models)  
+* ru-RU (default): Russian.
+* kk-KK: Kazakh.
+#### Example:
+[direct.ipynb](https://github.com/format37/stt.git)
