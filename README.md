@@ -94,8 +94,9 @@ This container based on Sergey Korol's [repository](https://github.com/sskorol/v
 [Asynchronous recognition:](https://cloud.yandex.com/en-ru/docs/speechkit/stt/transcribation)  
 * Maximum recording duration: 4 hours.  
 * Maximum file size: 1 GB.  
+  
 [Supported languages:](https://cloud.yandex.com/en-ru/docs/speechkit/stt/models)  
 * ru-RU (default): Russian.
 * kk-KK: Kazakh.
 #### Example:
-[direct.ipynb](https://github.com/format37/stt.git)
+[direct.ipynb](https://github.com/format37/stt/blob/main/yandex/direct.ipynb)
