@@ -98,5 +98,8 @@ This container based on Sergey Korol's [repository](https://github.com/sskorol/v
 [Supported languages:](https://cloud.yandex.com/en-ru/docs/speechkit/stt/models)  
 * ru-RU (default): Russian.
 * kk-KK: Kazakh.
+#### Requirements
+* [Yandex cloud](https://console.cloud.yandex.ru) paid account
+* Uploaded to blob storage audio file
 #### Example:
 [direct.ipynb](https://github.com/format37/stt/blob/main/yandex/direct.ipynb)
