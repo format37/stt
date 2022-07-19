@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+
+  server:
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            device_ids: ['0']
+            capabilities: [gpu]
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./model:/server/model:ro
+    build: server
+    ports:
+      - 10005:10005
+    environment:
+      - TZ=Europe/Moscow
+      # - HYDRA_FULL_ERROR=1
+      - PORT=10005
+      # - SPECTROGRAM_GENERATOR=mixerttsx
+      # - AUDIO_GENERATOR=hifigan

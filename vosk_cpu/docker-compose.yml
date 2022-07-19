@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  vosk-cpu:
+    # images:
+    # https://hub.docker.com/u/alphacep
+    image: alphacep/kaldi-ru:latest
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    environment:
+      - TZ=Europe/Moscow
+      - VOSK_SERVER_PORT=2800
