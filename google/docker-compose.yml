@@ -5,7 +5,7 @@ services:
       volumes:
         - /etc/localtime:/etc/localtime:ro
         - /etc/timezone:/etc/timezone:ro
-        # - ./data:/app/data:rw
+        - ./data:/app/data:rw
       build: server
       logging:
         options:
