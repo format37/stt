@@ -1,13 +1,13 @@
 # Google speech to text docker server
 #### Installation
 ```
-git clone https://github.com/format37/google_stt.git
-cd google_stt
+git clone https://github.com/format37/stt.git
+cd stt/google
 ```
 1. Create google cloud service account  
 2. Download json key and put to server/api.json
 ```
-sh compose
+sh compose.sh
 ```
 #### Using
 ```
