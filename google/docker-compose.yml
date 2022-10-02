@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  server: 
+      volumes:
+        - /etc/localtime:/etc/localtime:ro
+        - /etc/timezone:/etc/timezone:ro
+        # - ./data:/app/data:rw
+      build: server
+      logging:
+        options:
+          max-size: "10m"
+          max-file: "3"
+      network_mode: "host"
+      #ports:
+      #  - 4202:4202
+      environment:
+        - TZ=Europe/Moscow
+        - PORT=4202
