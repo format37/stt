@@ -5,7 +5,7 @@ over POST request
 
 import requests
 
-url = 'http://127.0.0.1:4202/inference'
+url = 'http://127.0.0.1:5000/inference'
 file_path = 'telegram.ogg'
 
 with open(file_path, 'rb') as f:
