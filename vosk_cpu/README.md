@@ -19,10 +19,14 @@ rm vosk-model-en-us-0.22.zip
 ```
 * Russian
 ```
-wget https://alphacephei.com/vosk/models/vosk-model-ru-0.10.zip
-unzip vosk-model-ru-0.10.zip
-mv vosk-model-ru-0.10 model
-rm vosk-model-ru-0.10.zip
+# wget https://alphacephei.com/vosk/models/vosk-model-ru-0.10.zip
+# unzip vosk-model-ru-0.10.zip
+# mv vosk-model-ru-0.10 model
+# rm vosk-model-ru-0.10.zip
+wget https://alphacephei.com/vosk/models/vosk-model-ru-0.22.zip
+unzip vosk-model-ru-0.22.zip
+mv vosk-model-ru-0.22 model
+rm vosk-model-ru-0.22.zip
 ```
 * Another languages:  
 [List of models](https://alphacephei.com/vosk/models)
