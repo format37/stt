@@ -32,7 +32,7 @@ rm vosk-model-ru-0.22.zip
 [List of models](https://alphacephei.com/vosk/models)
 #### Build
 ```
-sudo docker-compose up -d
+sh compose.sh
 ```
 #### Using
 ```

@@ -44,4 +44,4 @@ async def run_test(uri):
 
         print(phrases)
 
-asyncio.run(run_test('ws://localhost:2700'))
+asyncio.run(run_test('ws://localhost:2800'))
