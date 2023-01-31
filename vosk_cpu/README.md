@@ -4,6 +4,10 @@
 git clone https://github.com/format37/stt.git
 cd stt/vosk_cpu
 ```
+#### Install unzip
+```
+sudo apt-get install unzip
+```
 #### Download the model
 Choose your language:  
 * English
