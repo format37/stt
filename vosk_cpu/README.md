@@ -37,6 +37,7 @@ sudo docker-compose up -d
 #### Using
 ```
 cd client
+pip install -r requirements.txt
 python asr-test.py en.wav
 ```
 Expected output:
