@@ -8,9 +8,9 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-    # network mode: host
-    ports:
-      - 2800:2800
+    network_mode: "host"
+    # ports:
+    #   - 2800:2800
     environment:
       - TZ=Europe/Moscow
       - VOSK_SERVER_PORT=2800
