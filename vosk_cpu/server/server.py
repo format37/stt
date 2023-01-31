@@ -5,6 +5,12 @@ import soundfile as sf
 import torch
 from nemo.collections.tts.models.base import SpectrogramGenerator, Vocoder
 import uuid
+import logging
+
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 def load_spectrogram_model():
@@ -93,11 +99,13 @@ def infer(spec_gen_model, vocoder_model, str_input):
 
 
 async def call_test(request):
+    logger.info("Call test")
     content = "get ok"
     return web.Response(text=content, content_type="text/html")
 
 
 async def call_inference(request):
+    logger.info("Call inference")
     request_str = json.loads(str(await request.text()))
     data = json.loads(request_str)
     spec, audio = infer(spec_gen, vocoder, data['text'])
@@ -114,6 +122,7 @@ async def call_inference(request):
 
 
 def main():
+    logger.info("Starting server...")
     app = web.Application(client_max_size=1024**3)
     app.router.add_route('GET', '/test', call_test)
     app.router.add_route('POST', '/inference', call_inference)
