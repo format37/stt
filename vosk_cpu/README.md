@@ -1,7 +1,8 @@
 ## Kaldi Vosk speech to text transcribation CPU docker server
 #### Requirements
 * [Docker & Docker-compose](https://github.com/format37/docker_sample)
-* 16Gb RAM
+* 32Gb RAM
+8 is not enough, 32 is enough. The values between 8 and 32 have not been tested.
 ### Cloning the repository
 ```
 git clone https://github.com/format37/stt.git
@@ -37,7 +38,7 @@ sh compose.sh
 ```
 cd client
 pip install -r requirements.txt
-python asr-test.py en.wav
+python3 asr-test.py ru.wav
 ```
 Expected output:
 ```
