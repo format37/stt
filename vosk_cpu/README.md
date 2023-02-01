@@ -1,6 +1,6 @@
 ## Kaldi Vosk speech to text transcribation CPU docker server
 #### Requirements
-* (Docker & Docker-compose)[https://github.com/format37/docker_sample]
+* [Docker & Docker-compose](https://github.com/format37/docker_sample)
 * 16Gb RAM
 ### Cloning the repository
 ```
