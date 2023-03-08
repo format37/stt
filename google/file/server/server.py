@@ -55,8 +55,13 @@ def call_inference():
     file_path = os.path.join('data', request_id + '.ogg')
     file.save(file_path)
 
+    # The request send like: r = requests.post(url, files={'file': f}, data={'language_code': language_code})
+    # get the language code
+    language_code = request.form.get('language_code', '')
+    logger.info("Language code: %s", language_code)
+
     # transcribe
-    transcribation = transcribe_google('en', file_path)
+    transcribation = transcribe_google(language_code, file_path)
     logger.info("Transcribation: %s", transcribation)
 
     # remove file
