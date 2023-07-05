@@ -19,11 +19,12 @@ def transcribe_google(language, file_path):
     client = speech_v1p1beta1.SpeechClient()
     sample_rate_hertz = 8000
     encoding = speech_v1p1beta1.RecognitionConfig.AudioEncoding.MP3
-
+    # With speed
     config = {
         "language_code": language,
         "sample_rate_hertz": sample_rate_hertz,
         "encoding": encoding,
+        "enable_automatic_punctuation": True,
     }
     with io.open(file_path, 'rb') as audio_file:
         content = audio_file.read()
