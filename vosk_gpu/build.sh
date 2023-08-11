@@ -1,1 +1,1 @@
-docker build -t vosk_gpu .
+sudo docker build -t vosk_gpu .
