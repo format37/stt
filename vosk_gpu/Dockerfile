@@ -1,7 +1,8 @@
 FROM alphacep/kaldi-vosk-server-gpu:latest
 
 # Set environment variable for the model filename without extension
-ENV MODEL_FILENAME vosk-model-en-us-0.42-gigaspeech
+# ENV MODEL_FILENAME vosk-model-en-us-0.42-gigaspeech
+ENV MODEL_FILENAME vosk-model-ru-0.42
 
 # Change to the working directory
 RUN cd /opt/vosk-server/websocket-gpu-batch

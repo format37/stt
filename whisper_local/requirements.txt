@@ -1,0 +1,3 @@
+librosa
+transformers
+accelerate
