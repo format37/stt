@@ -1,0 +1,5 @@
+en-US
+uk-UA
+ru-RU
+ja-JP
+cmn-Hans-CN
